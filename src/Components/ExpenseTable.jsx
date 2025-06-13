@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 const ExpenseTable = ({ expenseData, onDeleteExpense }) => {
   let expenseDataRow = null;
+  let totalAmount = 0;
   const [selectedOption, setSelectedOption] = useState('');
   const [isEnabled,setEnabled]=useState(true);
   const[selectedAmount,setSelectedAmount]=useState('');
@@ -106,9 +107,10 @@ const sortByAmount = (a, b) => b.amount - a.amount;
             default:
               //expenseData;
  }
- 
-      expenseDataRow = expenseData.map((expense) => (
+ expenseDataRow = expenseData.map((expense) => {totalAmount=totalAmount + parseInt(expense.amount)})
         
+      expenseDataRow = expenseData.map((expense) => (
+       
       <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600" key={expense.id}>
         <td class="px-6 py-4">{expense.date}</td>
         <td class="px-6 py-4">₹{expense.amount}</td>
@@ -122,7 +124,9 @@ const sortByAmount = (a, b) => b.amount - a.amount;
             Delete
           </button>
         </td>
+         
       </tr>
+     
     ));
     
   
@@ -219,7 +223,9 @@ const sortByAmount = (a, b) => b.amount - a.amount;
          
         </tbody>
     </table>
-    
+   <h3 className="text-center text-xl text-white font-semibold m-4">
+          {`Total Expense : ${totalAmount} `}
+        </h3> 
 </div>
  
 

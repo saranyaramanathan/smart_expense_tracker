@@ -15,7 +15,7 @@ function Navbar() {
         </a>
          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SMART EXPENSE TRACKER</span>
                            <div className='flex justify-end'>
-                  <h2 className='p-2 font-semibold  '>About</h2>
+                  <h2 className='p-2 font-semibold hidden '>About</h2>
                 
                     </div>
     
