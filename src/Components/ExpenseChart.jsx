@@ -51,7 +51,7 @@ function ExpenseChart({expenses}) {
   };
 
   //return (<div className='bg-white w-full h-92 border  rounded m-4 p-4'><Bar data={chartData} options={chartOptions} /></div>);
-  return  (<div className='bg-white w-full h-92 m-4 p-4 flex justify-center'><Pie data={chartData}/></div>);
+  return  (expenses.length>0?<div className='bg-white w-full h-92 m-4 p-4 flex justify-center'><Pie data={chartData}/></div>:<div></div>);
    //return  (<div className='bg-white w-full m-4 p-4 flex justify-center h-92'><Doughnut data={chartData}/></div>);
 }
 
