@@ -20,6 +20,9 @@ const sortByAmount = (a, b) => b.amount - a.amount;
   const handleSortChange = (e) => {
     setSortBy(e.target.value);
     setSelection(e.target.value);
+    setSelectedAmount("All");
+    setSelectedDate('');
+    setSelectedOption("All");
   };
   //Category Filter
   const handleOptionChange = (event) => {
@@ -143,7 +146,7 @@ const sortByAmount = (a, b) => b.amount - a.amount;
 
   return (
     <div className="container flex flex-col justify-center mx-auto my-4 w-full p-4">
-      <h2 className="text-center text-2xl mb-4 text-white">Expense History</h2>
+      <h2 className="text-center text-2xl mb-4 text-white">EXPENSE HISTORY</h2>
      
     <div class="flex items-center justify-between px-4 py-2 space-x-2 border m-2 border-white">
             
@@ -151,7 +154,7 @@ const sortByAmount = (a, b) => b.amount - a.amount;
         <option value="date">Sort by Date</option>
         <option value="amount">Sort by Amount</option>
       </select> 
-      <h2 className="text-center text-xl mb-4 text-white">Filter </h2>
+      {/* <h2 className="text-center text-xl mb-4 text-white">Filter </h2> */}
        <input
         name="Select Date"
         type="date"
@@ -223,12 +226,12 @@ const sortByAmount = (a, b) => b.amount - a.amount;
          
         </tbody>
     </table>
-   <h3 className="text-center text-xl text-white font-semibold m-4">
-          {`Total Expense : ${totalAmount} `}
-        </h3> 
+    
 </div>
  
-
+<h3 className="text-center text-xl text-white font-semibold m-4">
+          {`Total Expense : ${totalAmount} `}
+        </h3>
  
   </div>
 

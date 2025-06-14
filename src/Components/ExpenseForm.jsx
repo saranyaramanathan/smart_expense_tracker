@@ -33,7 +33,7 @@ const ExpenseForm = ({ onAddExpense }) => {
   };
 
   return (
-    <div className="container bg-white mx-auto w-1/2 m-8 p-4">
+    <div className="container bg-white  rounded h-92  mx-8 w-92 p-4 ">
       <h2 className="text-center mb-4 text-2xl">Add Transaction</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3 border flex justify-between rounded mx-4 p-2">

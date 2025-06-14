@@ -19,7 +19,11 @@ function Dashboard(){
       return newData;
     });
   };
-
+  let totalIncome=100000;
+  let totalExpense= 0;
+  let balance=0;
+  expenseData.forEach((expense)=>totalExpense= totalExpense + parseInt(expense.amount))
+  balance=totalIncome - totalExpense;
   const deleteExpense = (id) => {
     setExpenseData((prevData) => {
       const newData = prevData.filter((expense) => expense.id !== id);
@@ -29,11 +33,27 @@ function Dashboard(){
   };
 
   return (
-    <div className="App bg-gray-800 flex mx-auto flex-wrap ">
+    <div className="bg-gray-800 flex mx-auto flex-wrap overflow-x-hidden">
       <Navbar/>
-      <ExpenseForm onAddExpense={addExpense} />
-      <ExpenseTable expenseData={expenseData} onDeleteExpense={deleteExpense} />
-      <ExpenseChart expenses={expenseData}/>
+      <div className='w-1/2 flex flex-wrap '>
+     
+       <ExpenseChart expenses={expenseData} type={"pie"} />
+       <ExpenseChart expenses={expenseData} type={"bar"} />
+       </div>
+        <div className='w-1/2 flex flex-col item-center flex-wrap '>
+         <div className="rounded bg-gray-50 w-92 h-24 m-8 p-4">
+        <div className='flex justify-between'>
+            <span className='border rounded text-xl font-semibold px-4 bg-red-700 text-white '>Income<div className=''>{`₹${totalIncome}`}</div></span>
+            <span className='border rounded text-xl font-semibold px-4 bg-blue-700 text-white '>Expense<div className=''>{`₹ ${totalExpense}`}</div></span>
+            <span className='border rounded text-xl font-semibold px-4 bg-green-700 text-white '>Balance<div className=''>{`₹ ${balance}`}</div></span>
+        </div>
+      </div>
+         <ExpenseForm onAddExpense={addExpense} />
+      
+      </div>
+   
+     <ExpenseTable expenseData={expenseData} onDeleteExpense={deleteExpense} />
+      
     </div>
   );
 }
