@@ -80,7 +80,7 @@ const uniqueData = Array.from(
     plugins: {
       title: {
         display: true,
-        text: 'Expense Chart',
+        text: 'Categrory Chart',
       },
        datalabels: {
         display: true,

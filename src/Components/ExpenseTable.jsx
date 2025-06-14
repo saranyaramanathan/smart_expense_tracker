@@ -3,6 +3,7 @@ import { useState } from "react";
 const ExpenseTable = ({ expenseData, onDeleteExpense }) => {
   let expenseDataRow = null;
   let totalAmount = 0;
+  
   const [selectedOption, setSelectedOption] = useState('');
   const [isEnabled,setEnabled]=useState(true);
   const[selectedAmount,setSelectedAmount]=useState('');

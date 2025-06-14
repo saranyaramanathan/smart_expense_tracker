@@ -24,6 +24,7 @@ function Dashboard(){
   let balance=0;
   expenseData.forEach((expense)=>totalExpense= totalExpense + parseInt(expense.amount))
   balance=totalIncome - totalExpense;
+  
   const deleteExpense = (id) => {
     setExpenseData((prevData) => {
       const newData = prevData.filter((expense) => expense.id !== id);
@@ -35,11 +36,11 @@ function Dashboard(){
   return (
     <div className="bg-gray-800 flex mx-auto flex-wrap overflow-x-hidden">
       <Navbar/>
-      <div className='w-1/2 flex flex-wrap '>
-     
+     { expenseData?.length>0 && <div className='w-1/2 flex flex-wrap '>
+        
        <ExpenseChart expenses={expenseData} type={"pie"} />
        <ExpenseChart expenses={expenseData} type={"bar"} />
-       </div>
+       </div>}
         <div className='w-1/2 flex flex-col item-center flex-wrap '>
          <div className="rounded bg-gray-50 w-92 h-24 m-8 p-4">
         <div className='flex justify-between'>
