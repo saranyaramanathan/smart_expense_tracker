@@ -149,7 +149,7 @@ const sortByAmount = (a, b) => b.amount - a.amount;
     <div className="container flex flex-col justify-center mx-auto my-4 w-full p-4">
       <h2 className="text-center text-2xl mb-4 text-white">EXPENSE HISTORY</h2>
      
-    <div class="flex items-center justify-between px-4 py-2 space-x-2 border m-2 border-white">
+    <div className="flex items-center justify-between px-4 py-2 space-x-2 border m-2 border-white">
             
       <select value={sortBy} onChange={handleSortChange} class="text-white border border-green-400 rounded p-2 bg-gray-800">
         <option value="date">Sort by Date</option>
@@ -199,9 +199,9 @@ const sortByAmount = (a, b) => b.amount - a.amount;
         
       </select>
     </div> 
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
      
-    <table class="w-full text-sm text-left rtl:text-right text-gray-700 dark:text-gray-400">
+    <table className="w-full text-sm text-left rtl:text-right text-gray-700 dark:text-gray-400">
         <thead class="text-xs text-gray-800 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 
