@@ -1,12 +1,44 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 💸 Smart Expense Tracker
 
-Currently, two official plugins are available:
+A modern, responsive web application built with **React** to help you effortlessly track your daily expenses. Visualize your spending, categorize your transactions, and manage your personal finances with ease using a clean and intuitive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **➕ Add & Manage Transactions**
+  - Input details such as amount, category, date, and notes
+  - Edit or delete existing transactions with ease
+
+- **📂 Categorize Spending**
+  - Organize your expenses using categories like *Food*, *Travel*, *Bills*, etc.
+
+- **📋 Dynamic Dashboard**
+  - View your most recent transactions in real time
+
+- **🔍 Filtering & Sorting**
+  - Filter by category
+  - Search by transaction note
+  - Sort by date (newest/oldest) or amount (highest/lowest)
+
+- **📊 Interactive Charts**
+  - A dynamic bar chart shows the distribution of your expenses by category
+
+- **💾 Persistent Data**
+  - Automatically saves data to **localStorage** to keep your records between sessions
+
+- **📱 Responsive Design**
+  - Works flawlessly on desktop, tablet, and mobile devices
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React JS  
+- **Styling**: Tailwind CSS  
+- **Charts**: Chart.js  
+- **Data Storage**: Browser `localStorage`
+
+---
